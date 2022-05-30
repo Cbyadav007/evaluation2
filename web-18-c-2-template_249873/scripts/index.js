@@ -1,4 +1,6 @@
 // Add the coffee to local storage with key "coffee"
+var count=JSON.parse(localStorage.getItem("coffee"));
+document.querySelector("#coffee_count").innerText=count.length;
 window.onload=getCoffee();
 async function getCoffee()
 {
@@ -59,12 +61,14 @@ function addFun(ele,index)
     arrObj.push(obj);
     
     localStorage.setItem("coffee",JSON.stringify(arrObj));
+    // window.location.reload();
+  count.length++;
+console.log("count=",count.length);
+document.querySelector("#coffee_count").innerText=arrObj.length;
 }
 
 
-var count=JSON.parse(localStorage.getItem("coffee"));
-console.log("count=",count.length);
-document.querySelector("#coffee_count").innerText=count.length;
+
 
 
 

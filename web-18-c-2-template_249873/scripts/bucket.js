@@ -54,6 +54,8 @@ function totalCount(total)
 { 
     buck.splice(index,1);
     localStorage.setItem("coffee",JSON.stringify(buck));
+    
+
     window.location.reload();
 }
    

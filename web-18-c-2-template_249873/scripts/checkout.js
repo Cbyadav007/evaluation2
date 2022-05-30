@@ -1,14 +1,27 @@
 document.querySelector("#confirm").addEventListener("click",checkFun);
-var id;
+var count=0;
 function checkFun()
 {
-   id = setInterval(function(){
-        alert("Your order is accepted");
-    });
-
-    setInterval(function(){
-        alert("ff");
+    alert("Your order is accepted");
+   setTimeout(function(){
+        alert("Your order is being Prepared");
+       
     },3000);
-    clearInterval(id);
+
+    setTimeout(function(){
+        alert("Your order is being Packed");
+        
+    },11000);
+    setTimeout(function(){
+        alert("Your order is out for delivery");
+       
+    },21000);
+
+    setTimeout(function(){
+        alert("Order delivered");
+        
+    },32000);
+    
+
 
 }
